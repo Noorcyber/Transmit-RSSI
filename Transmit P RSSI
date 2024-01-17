@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Function to display the design
+display_design() {
+    cat << "EOF"
+ _______  _______  _______  _______ 
+|   _   ||       ||  _    ||       |
+|  |_|  ||   _   || |_|   ||    ___|
+|       ||  | |  ||       ||   |___ 
+|       ||  |_|  ||  _   | |    ___|
+|   _   ||       || |_|   ||   |___
+|__| |__||_______||_______||_______|
+                                     
+By Noor Shaheed, Datto, Kaseya. 01/10/2024
+AP RSSI and Transmit Power Checker
+----------------------------
+EOF
+}
+
+# Function to check RSSI values
+check_rssi() {
+    echo "Checking RSSI values..."
+    # Add your command to check RSSI values here
+    # Example: iwconfig <interface>
+}
+
+# Function to adjust transmit power
+adjust_transmit_power() {
+    echo "Adjusting transmit power..."
+    # Add your command to adjust transmit power here
+    # Example: iwconfig <interface> txpower <power_level>
+}
+
+# Main function
+main() {
+    display_design
+
+    # Run the functions
+    echo "-------------------------"
+    check_rssi
+    echo "-------------------------"
+    adjust_transmit_power
+}
+
+# Call the main function
+main
