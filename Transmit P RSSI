@@ -3,16 +3,14 @@
 # Function to display the design
 display_design() {
     cat << "EOF"
-
  _____                                   _  _    ______  _____  _____  _____ 
 |_   _|                                 (_)| |   | ___ \/  ___|/  ___||_   _|
   | | _ __  __ _  _ __   ___  _ __ ___   _ | |_  | |_/ /\ `--. \ `--.   | |  
   | || '__|/ _` || '_ \ / __|| '_ ` _ \ | || __| |    /  `--. \ `--. \  | |  
   | || |  | (_| || | | |\__ \| | | | | || || |_  | |\ \ /\__/ //\__/ / _| |_ 
   \_/|_|   \__,_||_| |_||___/|_| |_| |_||_| \__| \_| \_|\____/ \____/  \___/ 
-                                                                             
-                                                                             
-By Noor Shaheed, Datto, Kaseya. 01/15/2024
+                                     
+By Noor Shaheed, Datto, Kaseya. 01/10/2024
 AP RSSI and Transmit Power Checker
 ----------------------------
 EOF
@@ -21,15 +19,13 @@ EOF
 # Function to check RSSI values
 check_rssi() {
     echo "Checking RSSI values..."
-    # Add your command to check RSSI values here
-    # Example: iwconfig <interface>
+    iwconfig wlan0    # Replace wlan0 with your actual wireless interface
 }
 
 # Function to adjust transmit power
 adjust_transmit_power() {
     echo "Adjusting transmit power..."
-    # Add your command to adjust transmit power here
-    # Example: iwconfig <interface> txpower <power_level>
+    iwconfig wlan0 txpower 20    # Replace wlan0 with your actual wireless interface and 20 with your desired power level
 }
 
 # Main function
